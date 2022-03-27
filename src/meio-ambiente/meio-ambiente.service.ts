@@ -9,7 +9,7 @@ export class MeioAmbienteService {
     constructor(@InjectModel('recycling') private recyclingModel: Model<Recycling>){}
 
     async getRecyclingPlaces(recyclingDTO){
-        return await this.recyclingModel.find(recyclingDTO)
+        return await this.recyclingModel.find({name : recyclingDTO.name});
     }
 
     async addRecyclingPlace(recyclingDTO){
