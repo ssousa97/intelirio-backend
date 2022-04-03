@@ -7,7 +7,7 @@ import { SegurancaService } from './seguranca.service';
 @Module({
   imports:[
     MongooseModule.forFeature([
-      {name: 'ocorrencia', schema: OcorrenciaSchema}
+      {name: 'ocorrencias', schema: OcorrenciaSchema}
     ])
   ],
   controllers: [SegurancaController],
